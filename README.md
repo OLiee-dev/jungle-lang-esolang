@@ -110,3 +110,74 @@ if __name__ == "__main__":
         print("Uso: python tradutor.py programa.jgl")
     else:
         traduzir(sys.argv[1])
+
+## 📝 3. Programas de Demonstração
+
+### 🔹 Programa 1: Hello World
+Apenas exibe a mensagem clássica na tela usando as regras da linguagem.
+
+<details>
+  <summary>📄 Ver código em JungleLang (.jgl)</summary>
+
+```text
+RUGIR "Hello World!"
+
+print("Hello World!")
+
+NASCER qut = 99
+NASCER um = 1
+ENQUANTO qut > 0
+    RUGIR qut
+    RUGIR "garrafas de cerveja na selva!"
+    PERDER qut qut um
+FOME
+RUGIR "Fim do estoque!"
+
+qut = 99
+um = 1
+while qut > 0:
+    print(qut)
+    print("garrafas de cerveja na selva!")
+    qut = qut - um
+print("Fim do estoque!")
+
+RUGIR "Digite um numero para calcular o fatorial:"
+CAÇAR entrada
+NASCER numero = int(entrada)
+
+NASCER resultado = 1
+NASCER um = 1
+
+ENQUANTO numero > 1
+    NASCER temp = resultado
+    NASCER copia_numero = numero
+    PERDER copia_numero copia_numero um
+    
+    ENQUANTO copia_numero > 0
+        MUTAR resultado resultado temp
+        PERDER copia_numero copia_numero um
+    FOME
+    
+    PERDER numero numero um
+FOME
+
+RUGIR "O fatorial selvagem desse numero eh:"
+RUGIR resultado
+
+print("Digite um numero para calcular o fatorial:")
+entrada = input()
+numero = int(entrada)
+resultado = 1
+um = 1
+while numero > 1:
+    temp = resultado
+    copia_numero = numero
+    copia_numero = copia_numero - um
+    while copia_numero > 0:
+        resultado = resultado + temp
+        copia_numero = copia_numero - um
+    numero = numero - um
+print("O fatorial selvagem desse numero eh:")
+print(resultado)
+
+
